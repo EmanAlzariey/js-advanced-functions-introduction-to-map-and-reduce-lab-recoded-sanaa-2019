@@ -65,7 +65,7 @@ function reduceToAllTrue(sourceArray){
     let startingPoint= true;
   
       for( const element of sourceArray){
-        //  console.log(startingPoint && element);
+        //  console.log(startingPoint && Boolean(element));
         startingPoint = startingPoint && Boolean(element);
       } 
       return startingPoint;
