@@ -57,7 +57,7 @@ function reduceToTotal(sourceArray, startingPoint=0){
 
 console.log(reduceToTotal(sourceArray));
 
-sourceArray1 =[ true, false, false, true];
+sourceArray = [1, 2, true, "me"] //all true
 
 
 function reduceToAllTrue(sourceArray){
@@ -66,21 +66,22 @@ function reduceToAllTrue(sourceArray){
   
       for( const element of sourceArray){
         //  console.log(startingPoint && element);
-        startingPoint = startingPoint && element;
-      }
+        startingPoint = startingPoint && Boolean(element);
+      } 
       return startingPoint;
   }
 
-  // console.log(reduceToAllTrue(sourceArray1));
+ //console.log(reduceToAllTrue(sourceArray));
 
 function reduceToAnyTrue(sourceArray){
 
     let startingPoint= false;
   
       for( const element of sourceArray){
-        //  console.log(startingPoint || element);
-        startingPoint = startingPoint || element;
+        //  console.log(startingPoint || Boolean(element));
+        startingPoint = startingPoint || Boolean(element);
+       
       }
       return startingPoint;
   }
-// console.log(reduceToAnyTrue(sourceArray1));
+//console.log(reduceToAnyTrue(sourceArray));
