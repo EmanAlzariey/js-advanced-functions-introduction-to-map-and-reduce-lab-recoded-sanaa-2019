@@ -57,7 +57,7 @@ function reduceToTotal(sourceArray, startingPoint=0){
 
 console.log(reduceToTotal(sourceArray));
 
-sourceArray = [1, 2, true, "me"] //all true
+sourceArray = [ 8, true, true, "me"] //all true
 
 
 function reduceToAllTrue(sourceArray){
